@@ -2,10 +2,41 @@ body {
   font-family: "Momo Trust Display", sans-serif;
 }
 
-.container-flex {
-  display: flex;
-  justify-content: flex-start; /* Alinha horizontalmente à esquerda */
-  align-items: flex-start; /* Alinha verticalmente ao topo */
-  height: 300px; /* Altura de exemplo para o container */
-  border: 1px solid #000; /* Apenas para visualização */
+/*animacao barra para 992px*/
+.bar1,
+.bar2,
+.bar3 {
+  width: 23px;
+  height: 2px;
+  margin: 5px;
+  background: #2a9134;
+  transition: all 0.5s ease;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -8px);
+}
+
+/*icones redes sociais*/
+.social a {
+  font-size: 1.1rem;
+  transition: color 0.3s; /* CSS3: transição suave */
+}
+
+.social a:hover {
+  color: #2a9134 !important; /* !important porque o text-white do Bootstrap também usa !important */
+}
+
+/*carrossel*/
+.carousel-item {
+  min-height: 60vh;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
 }
