@@ -40,3 +40,194 @@ body {
   min-height: 60vh;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
 }
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+  bottom: 20%;;
+}
+
+/* Só o título */
+.carousel-caption h1 {
+  font-family: "Kalam", cursive;
+}
+
+/* Só a frase */
+.carousel-caption p {
+  font-family: "Kalam", cursive;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Escondido por defeito, incluindo durante a transição */
+.carousel-caption {
+  opacity: 0;
+}
+
+/* Só aparece quando o slide já está ativo */
+.carousel-item.active .carousel-caption {
+  animation: aparecer 1s ease 0.2s both;
+}
+
+/* Sobe os tracinhos */
+.carousel-indicators {
+  bottom: 10%;
+}
+
+.seta-scroll {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: #fff;
+  font-size: 2rem;
+  animation: saltar 2s infinite;
+}
+
+@keyframes saltar {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, 10px); }
+}
+
+.skill-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #2a9134;
+  display: flex; /* centra o ícone dentro do polígono */
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #000; /* ícone preto */
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  ); /* hexágono */
+  transition: all 0.3s;
+}
+
+.skill-icon:hover {
+  color: #fff; /* ícone fica branco com o rato por cima */
+  background-color: #1e6b26;
+}
+
+/* Fundo cinzento em forma de polígono */
+.about {
+  background-color: #e9ecef;
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  padding-top: 6rem !important;     /* espaço extra para o polígono não cortar o conteúdo */
+  padding-bottom: 6rem !important;
+}
+
+/* Globo verde para voltar ao topo */
+.back-top {
+  font-size: 2rem;
+  color: #2a9134;
+  transition: transform 0.3s;
+}
+
+.back-top:hover {
+  color: #1e6b26;
+  transform: scale(1.2);
+}
+
+/* Contentor da imagem: esconde o que sai para fora quando a imagem cresce */
+.img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-top {
+  transition: transform 0.5s, filter 0.5s;
+}
+
+/* Efeito: a imagem aumenta e escurece */
+.card:hover .card-img-top {
+  transform: scale(1.1);
+  filter: brightness(60%);
+}
+
+/* Camada verde transparente por cima da imagem */
+.img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;                         /* ocupa toda a imagem */
+  background-color: rgba(42, 145, 52, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card:hover .img-wrap::after {
+  opacity: 1;
+}
+
+.btn-submit {
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
+body {
+  background-image: url("../images/imagem-fundo.png");
+  background-size: cover;          /* a imagem cobre o ecrã todo */
+  background-position: center;     /* centrada */
+  background-repeat: no-repeat;    /* não se repete em mosaico */
+  background-attachment: fixed;    /* fica parada enquanto fazes scroll */
+}
+
+#skills,
+#projects {
+  color: #ffffff;   /* troca pela cor que quiseres */
+}
+
+/* ===== Página Mensagem da Esperança ===== */
+
+/* Fundo semitransparente, para o texto se ler bem por cima da imagem fixa do body */
+#projeto {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Títulos a verde */
+#projeto h2,
+#projeto h3 {
+  color: #2a9134;
+}
+
+/* Cards das duas partes da app */
+#projeto .card {
+  border: none;
+  border-top: 4px solid #2a9134;
+  transition: transform 0.3s;
+}
+
+#projeto .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Espaço entre os pontos das listas */
+#projeto li {
+  margin-bottom: 0.5rem;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}

@@ -30,37 +30,65 @@
       href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
-    <header id="topo">
+  <!-- Scrollspy: marca no menu a secção onde estás enquanto fazes scroll -->
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#menu"
+    data-bs-offset="100"
+    tabindex="0"
+  >
+    <header id="top" class="sticky-top">
       <!-- barra de topo + navbar -->
       <div class="top-bar bg-dark text-white py-2">
         <div
-          class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+          class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center"
         >
           <span>Bem-vindo ao meu portfólio</span>
 
           <div class="social">
-            <a href="#" class="text-white me-3"
+            <a
+              href="https://www.facebook.com/?locale=pt_PT"
+              class="text-white me-3"
+              target="_blank"
+              rel="noopener"
               ><i class="bi bi-facebook"></i
             ></a>
-            <a href="#" class="text-white me-3"
+            <a
+              href="https://www.instagram.com/"
+              class="text-white me-3"
+              target="_blank"
+              rel="noopener"
               ><i class="bi bi-instagram"></i
             ></a>
-            <a href="#" class="text-white me-3"
+            <a
+              href="https://www.linkedin.com/"
+              class="text-white me-3"
+              target="_blank"
+              rel="noopener"
               ><i class="bi bi-linkedin"></i
             ></a>
-            <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+            <a
+              href="https://github.com/"
+              class="text-white"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-github"></i
+            ></a>
           </div>
         </div>
       </div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <div class="container">
+        <div class="container-fluid">
           <!-- Nome à esquerda -->
-          <a class="navbar-brand px-3" href="#top">Lobato</a>
+          <a class="navbar-brand px-3" href="#home">Lobato</a>
 
           <!-- Botão das 3 linhas (só aparece abaixo de 992px) -->
           <button
@@ -80,7 +108,9 @@
           <!-- Entradas do menu -->
           <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="#skills">Skills</a>
               </li>
@@ -98,15 +128,23 @@
                   aria-expanded="false"
                   >Projects</a
                 >
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="#projects">Web</a></li>
-                  <li><a class="dropdown-item" href="#projects">Design</a></li>
+                <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#projects">Fotografia</a>
+                    <a class="dropdown-item" href="MensagemDaEsperanca.html"
+                      >Mensagem da Esperança</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="Projects.html">Project 2</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="Projects.html"
+                      >See More...</a
+                    >
                   </li>
                 </ul>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
               </li>
@@ -116,83 +154,235 @@
       </nav>
     </header>
     <main>
-      <div id="carouselExampleDark" class="carousel carousel-dark slide">
-        <div class="carousel-indicators">
+      <!-- Secção do carrossel (id="home" para o Scrollspy marcar o Home) -->
+      <section id="home">
+        <div id="carousel" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="" class="d-block w-100" alt="" />
+              <div class="carousel-caption d-none d-md-block">
+                <h1>João Lobato</h1>
+                <p>Estudante de Engenharia Informática e Multimédia</p>
+                <a
+                  href="Projects.html"
+                  class="btn btn-outline-light btn-work rounded-pill px-4"
+                >
+                  My Work <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="" class="d-block w-100" alt="" />
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Programação e Web Design</h1>
+                <p>Sites modernos e responsivos</p>
+                <a
+                  href="Projects.html"
+                  class="btn btn-outline-light btn-work rounded-pill px-4"
+                >
+                  My Work <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="" class="d-block w-100" alt="" />
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Fotografia e Design</h1>
+                <p>Projetos criativos</p>
+                <a
+                  href="Projects.html"
+                  class="btn btn-outline-light btn-work rounded-pill px-4"
+                >
+                  My Work <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <a href="#skills" class="seta-scroll"
+              ><i class="bi bi-chevron-down"></i
+            ></a>
+          </div>
           <button
+            class="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
+            data-bs-target="#carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
           <button
+            class="carousel-control-next"
             type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+            data-bs-target="#carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="..." class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
+      </section>
+      <section id="skills" class="py-5">
+        <div class="container text-center">
+          <!-- Título e subtítulo -->
+          <h2 class="fw-bold">MY SKILLS</h2>
+          <p>O que sei fazer</p>
+
+          <!-- Botão voltar ao topo -->
+          <a href="#home" class="btn btn-success rounded-circle mb-5">
+            <i class="bi bi-arrow-up"></i>
+          </a>
+
+          <!-- Grelha de skills -->
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="skill-icon mx-auto mb-3">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h4>HTML & CSS</h4>
+              <p>Páginas web estruturadas e bem formatadas.</p>
             </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="..." class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="skill-icon mx-auto mb-3">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h4>Responsive Design</h4>
+              <p>Sites que se adaptam a qualquer ecrã.</p>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="skill-icon mx-auto mb-3">
+                <i class="bi bi-camera"></i>
+              </div>
+              <h4>Fotografia</h4>
+              <p>Captura e edição de imagem.</p>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="skill-icon mx-auto mb-3">
+                <i class="bi bi-palette"></i>
+              </div>
+              <h4>Design</h4>
+              <p>Interfaces simples e bonitas.</p>
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div> 
-      <section id="skills">…</section>
-      <section id="about">…</section>
-      <section id="projects">…</section>
-      <section id="contact">…</section>
+      </section>
+      <section id="about" class="about py-5">
+        <div class="container">
+          <!-- Título, subtítulo e globo -->
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">ABOUT ME</h2>
+            <p class="text-muted">Um pouco sobre mim</p>
+            <a href="#home" class="back-top"><i class="bi bi-globe"></i></a>
+          </div>
+
+          <div class="row align-items-center g-5">
+            <!-- Coluna esquerda: foto e texto -->
+            <div class="col-12 col-md-6">
+              <img
+                src="images/eu.jpg"
+                class="img-fluid rounded mb-3"
+                alt="Foto minha"
+              />
+              <h3>Olá, sou o João Lobato</h3>
+              <p>
+                Estudante do 1.º ano de Engenharia Informática e Multimédia no
+                ISEL. Gosto de programação, design e fotografia.
+              </p>
+              <a href="#" class="btn btn-success btn-work">Download Resume</a>
+            </div>
+
+            <!-- Coluna direita: barras de progresso -->
+            <div class="col-12 col-md-6">
+              <h4 class="mb-4">As minhas competências</h4>
+
+              <p class="mb-1">HTML</p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-success" style="width: 90%">
+                  90%
+                </div>
+              </div>
+
+              <p class="mb-1">CSS</p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-success" style="width: 75%">
+                  75%
+                </div>
+              </div>
+
+              <p class="mb-1">Bootstrap</p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-success" style="width: 60%">
+                  60%
+                </div>
+              </div>
+
+              <p class="mb-1">Photoshop</p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-success" style="width: 50%">
+                  50%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+          <h2 class="fw-bold">CONTACT ME</h2>
+          <p class="text-muted mb-4">Deixa o teu email e entro em contacto</p>
+
+          <form class="row justify-content-center g-2">
+            <div class="col-12 col-md-6">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="O teu email"
+                required
+              />
+            </div>
+            <div class="col-12 col-md-auto">
+              <button type="submit" class="btn btn-success btn-submit w-100">
+                Submit Here
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer>…</footer>
+
+    <footer class="bg-black text-white text-center py-4">
+      <div class="social mb-2">
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2026 João. Todos os direitos reservados.</p>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
