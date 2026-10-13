@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <title>Configuração NixOS | My Portfolio</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header id="top">
+      <!-- barra de topo + navbar -->
+      <div class="top-bar bg-dark text-white py-2">
+        <div
+          class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center"
+        >
+          <span>Bem-vindo ao meu portfólio</span>
+
+          <div class="social">
+            <a
+              href="https://www.facebook.com/?locale=pt_PT"
+              class="text-white me-3"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/"
+              class="text-white me-3"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/"
+              class="text-white me-3"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/"
+              class="text-white"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid">
+          <!-- Nome à esquerda -->
+          <a class="navbar-brand px-3" href="index(1).html">Lobato</a>
+
+          <!-- Botão das 3 linhas (só aparece abaixo de 992px) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </button>
+
+          <!-- Entradas do menu -->
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index(1).html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index(1).html#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index(1).html#about">About</a>
+              </li>
+
+              <!-- Entrada com submenu -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Projects</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="MensagemDaEsperanca.html"
+                      >Mensagem da Esperança</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item active" href="NixOS.html"
+                      >Configuração NixOS</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="Projects.html"
+                      >See More...</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index(1).html#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== Apresentação do projeto ===== -->
+      <section id="projeto" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h1 class="fw-bold">Configuração NixOS</h1>
+            <p class="lead">
+              Sistema Linux declarativo e reprodutível, em dual boot com o
+              Windows, montado de raiz no meu portátil.
+            </p>
+            <a href="#top" class="back-top"><i class="bi bi-terminal"></i></a>
+          </div>
+
+          <!-- O que é -->
+          <article class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8">
+              <h2 class="h3 fw-bold">O que é</h2>
+              <p>
+                O <strong>NixOS</strong> é uma distribuição Linux em que todo o
+                sistema é descrito em ficheiros de configuração escritos na
+                linguagem <strong>Nix</strong>. Em vez de instalar e configurar
+                programas à mão, escrevo o que quero e o sistema é construído a
+                partir daí. A minha configuração usa
+                <strong>Flakes</strong> (nixpkgs 26.05) e
+                <strong>Home Manager</strong>, e está dividida em módulos.
+              </p>
+            </div>
+          </article>
+
+          <!-- Para que serve -->
+          <article class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8">
+              <h2 class="h3 fw-bold">Para que serve</h2>
+              <p>
+                É o sistema que uso no dia a dia para estudar e programar. Como
+                tudo está em ficheiros, posso voltar a uma versão anterior no
+                menu de arranque se algo correr mal, e reinstalar o mesmo
+                sistema noutra máquina com os mesmos ficheiros. O Windows
+                continua instalado no mesmo disco.
+              </p>
+            </div>
+          </article>
+
+          <!-- Os dois ambientes -->
+          <div class="row g-4 justify-content-center mb-5">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100">
+                <div class="card-body">
+                  <h3 class="h5 card-title fw-bold">
+                    <i class="bi bi-window-stack me-2"></i>KDE Plasma
+                  </h3>
+                  <ul class="mb-0">
+                    <li>Ambiente de trabalho completo e tradicional.</li>
+                    <li>Foi o primeiro ambiente instalado.</li>
+                    <li>
+                      Fica disponível como alternativa no ecrã de início de
+                      sessão.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100">
+                <div class="card-body">
+                  <h3 class="h5 card-title fw-bold">
+                    <i class="bi bi-grid-1x2 me-2"></i>Hyprland
+                  </h3>
+                  <ul class="mb-0">
+                    <li>
+                      Gestor de janelas em mosaico (tiling), configurado em Lua.
+                    </li>
+                    <li>Barra e painéis com o Caelestia shell.</li>
+                    <li>Walker como lançador de aplicações.</li>
+                    <li>Terminal com a shell fish.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Estrutura -->
+          <article class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8">
+              <h2 class="h3 fw-bold">Estrutura da configuração</h2>
+              <p>
+                Cada parte do sistema tem o seu ficheiro, o que torna a
+                configuração mais fácil de ler e de alterar:
+              </p>
+              <pre class="bg-dark text-white p-3 rounded-3"><code>/etc/nixos
+├── flake.nix            # entradas: nixpkgs, home-manager
+├── configuration.nix    # configuração principal
+└── modules/
+    ├── default.nix      # junta todos os módulos
+    ├── packages.nix     # programas instalados
+    ├── Nvidia.nix       # placa gráfica
+    └── calestia.nix     # Caelestia shell</code></pre>
+            </div>
+          </article>
+
+          <!-- Ecrãs -->
+          <article class="mb-5">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-8">
+                <h2 class="h3 fw-bold">Capturas de ecrã</h2>
+                <p>Alguns aspetos do sistema a funcionar no portátil.</p>
+              </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-6 col-lg-4">
+                <figure class="figure w-100 text-center">
+                  <img
+                    src="images/nixos-hyprland.png"
+                    class="figure-img img-fluid rounded-4 shadow border"
+                    alt="Ambiente Hyprland com o Caelestia shell"
+                  />
+                  <figcaption class="figure-caption">
+                    <strong>Hyprland:</strong> ambiente de trabalho com o
+                    Caelestia shell.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4">
+                <figure class="figure w-100 text-center">
+                  <img
+                    src="images/nixos-plasma.png"
+                    class="figure-img img-fluid rounded-4 shadow border"
+                    alt="Ambiente KDE Plasma"
+                  />
+                  <figcaption class="figure-caption">
+                    <strong>Plasma:</strong> o ambiente de trabalho alternativo.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4">
+                <figure class="figure w-100 text-center">
+                  <img
+                    src="images/nixos-config.png"
+                    class="figure-img img-fluid rounded-4 shadow border"
+                    alt="Ficheiro flake.nix aberto no editor"
+                  />
+                  <figcaption class="figure-caption">
+                    <strong>Configuração:</strong> o ficheiro flake.nix no
+                    editor.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pormenores técnicos -->
+          <article class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+              <h2 class="h3 fw-bold">Pormenores técnicos</h2>
+              <ul>
+                <li>
+                  <strong>Placa Nvidia:</strong> o portátil tem gráfica
+                  integrada e Nvidia, e a BIOS não permite escolher entre elas.
+                  Configurei o PRIME offload, para usar a Nvidia só quando é
+                  preciso.
+                </li>
+                <li>
+                  <strong>Suspensão:</strong> o portátil só suporta o modo
+                  s2idle e o ecrã ficava preto ao acordar. A solução foi usar
+                  hibernação, com uma swap de 18 GiB criada para isso.
+                </li>
+                <li>
+                  <strong>Dual boot:</strong> o menu de arranque mostra as
+                  versões do NixOS e o Windows. Tive de acertar o relógio entre
+                  os dois sistemas e desligar o arranque rápido do Windows.
+                </li>
+                <li>
+                  <strong>Flakes:</strong> comecei sem Flakes e converti a
+                  configuração depois, para fixar as versões dos pacotes.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Voltar -->
+          <div class="text-center mt-5">
+            <a href="index(1).html" class="btn btn-success btn-work">
+              <i class="bi bi-arrow-left me-2"></i>Voltar ao portfólio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white text-center py-4">
+      <div class="social mb-2">
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2026 João. Todos os direitos reservados.</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbarToggler = document.querySelector(".navbar-toggler");
+
+        if (navbarToggler) {
+          navbarToggler.addEventListener("click", function () {
+            navbarToggler.classList.toggle("change");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

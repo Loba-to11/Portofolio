@@ -210,7 +210,7 @@ body {
   color: #ffffff; /* troca pela cor que quiseres */
 }
 
-/* ===== Página Mensagem da Esperança ===== */
+/* Página Mensagem da Esperança e Configuração NixOs */
 
 /* Fundo semitransparente, para o texto se ler bem por cima da imagem fixa do body */
 #projeto {
@@ -243,4 +243,19 @@ body {
   height: 250px;
   object-fit: cover;
   object-position: top;
+}
+
+#aboutCarousel,
+#aboutCarousel .carousel-inner,
+#aboutCarousel .carousel-item {
+  background: none !important;
+  clip-path: none !important;
+  height: auto !important;
+}
+
+#aboutCarousel .carousel-item::before,
+#aboutCarousel .carousel-item::after,
+#aboutCarousel .carousel-inner::before,
+#aboutCarousel .carousel-inner::after {
+  display: none !important;
 }

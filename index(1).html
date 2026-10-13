@@ -88,7 +88,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container-fluid">
           <!-- Nome à esquerda -->
-          <a class="navbar-brand px-3" href="#home">Lobato</a>
+          <a class="navbar-brand px-3" href="#home">Lobato & Francisco</a>
 
           <!-- Botão das 3 linhas (só aparece abaixo de 992px) -->
           <button
@@ -128,14 +128,16 @@
                   aria-expanded="false"
                   >Projects</a
                 >
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-end">
                   <li>
                     <a class="dropdown-item" href="MensagemDaEsperanca.html"
                       >Mensagem da Esperança</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="Projects.html">Project 2</a>
+                    <a class="dropdown-item" href="NixOS.html"
+                      >Configuração do NixOS</a
+                    >
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
@@ -209,8 +211,8 @@
             <div class="carousel-item">
               <img src="" class="d-block w-100" alt="" />
               <div class="carousel-caption d-none d-md-block">
-                <h1>Fotografia e Design</h1>
-                <p>Projetos criativos</p>
+                <h1>Francisco Vasconcelos</h1>
+                <p>Estudante de Engenharia Informática e Multimédia</p>
                 <a
                   href="Projects.html"
                   class="btn btn-outline-light btn-work rounded-pill px-4"
@@ -292,61 +294,166 @@
       </section>
       <section id="about" class="about py-5">
         <div class="container">
-          <!-- Título, subtítulo e globo -->
+          <!-- Título, subtítulo e globo (fica igual, fora do carrossel) -->
           <div class="text-center mb-5">
             <h2 class="fw-bold">ABOUT ME</h2>
             <p class="text-muted">Um pouco sobre mim</p>
             <a href="#home" class="back-top"><i class="bi bi-globe"></i></a>
           </div>
 
-          <div class="row align-items-center g-5">
-            <!-- Coluna esquerda: foto e texto -->
-            <div class="col-12 col-md-6">
-              <img
-                src="images/eu.jpg"
-                class="img-fluid rounded mb-3"
-                alt="Foto minha"
-              />
-              <h3>Olá, sou o João Lobato</h3>
-              <p>
-                Estudante do 1.º ano de Engenharia Informática e Multimédia no
-                ISEL. Gosto de programação, design e fotografia.
-              </p>
-              <a href="#" class="btn btn-success btn-work">Download Resume</a>
+          <div id="aboutCarousel" class="carousel slide" data-bs-theme="dark">
+            <!-- Indicadores (bolinhas) -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#aboutCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#aboutCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
             </div>
 
-            <!-- Coluna direita: barras de progresso -->
-            <div class="col-12 col-md-6">
-              <h4 class="mb-4">As minhas competências</h4>
+            <div class="carousel-inner">
+              <!-- SLIDE 1: tu -->
+              <div class="carousel-item active">
+                <div class="row align-items-center g-5 px-5 pb-5">
+                  <div class="col-12 col-md-6">
+                    <img
+                      src="images/eu.jpg"
+                      class="img-fluid rounded mb-3"
+                      alt="Foto minha"
+                    />
+                    <h3>Olá, sou o João Lobato</h3>
+                    <p>
+                      Estudante do 2.º ano de Engenharia Informática e
+                      Multimédia no ISEL. Gosto de programação, design e
+                      fotografia.
+                    </p>
+                    <a href="#" class="btn btn-success btn-work"
+                      >Download Resume</a
+                    >
+                  </div>
 
-              <p class="mb-1">HTML</p>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-success" style="width: 90%">
-                  90%
+                  <div class="col-12 col-md-6">
+                    <h4 class="mb-4">As minhas competências</h4>
+
+                    <p class="mb-1">HTML</p>
+                    <div class="progress mb-3">
+                      <div class="progress-bar bg-success" style="width: 90%">
+                        90%
+                      </div>
+                    </div>
+
+                    <p class="mb-1">CSS</p>
+                    <div class="progress mb-3">
+                      <div class="progress-bar bg-success" style="width: 75%">
+                        75%
+                      </div>
+                    </div>
+
+                    <p class="mb-1">Bootstrap</p>
+                    <div class="progress mb-3">
+                      <div class="progress-bar bg-success" style="width: 60%">
+                        60%
+                      </div>
+                    </div>
+
+                    <p class="mb-1">Photoshop</p>
+                    <div class="progress mb-3">
+                      <div class="progress-bar bg-success" style="width: 50%">
+                        50%
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <p class="mb-1">CSS</p>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-success" style="width: 75%">
-                  75%
-                </div>
-              </div>
+              <!-- SLIDE 2: colega (mesma estrutura, muda só os dados) -->
+              <div class="carousel-item">
+                <div class="row align-items-center g-5 px-5 pb-5">
+                  <div class="col-12 col-md-6">
+                    <img
+                      src="images/colega.jpg"
+                      class="img-fluid rounded mb-3"
+                      alt="Foto do colega"
+                    />
+                    <h3>Olá, sou o Francisco Vasconcelos</h3>
+                    <p>
+                      Estudante do 2.º ano de Engenharia Informática e
+                      Multimédia no ISEL. Gosto de Design, Game Developing.
+                    </p>
+                    <a href="#" class="btn btn-success btn-work"
+                      >Download Resume</a
+                    >
+                  </div>
 
-              <p class="mb-1">Bootstrap</p>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-success" style="width: 60%">
-                  60%
-                </div>
-              </div>
+                  <div class="col-12 col-md-6">
+                    <h4 class="mb-4">As minhas competências</h4>
 
-              <p class="mb-1">Photoshop</p>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-success" style="width: 50%">
-                  50%
+                    <p class="mb-1">HTML</p>
+                    <div class="progress mb-3">
+                      <div class="progress-bar bg-success" style="width: 80%">
+                        80%
+                      </div>
+                    </div>
+
+                    <p class="mb-1">CSS</p>
+                    <div class="progress mb-3">
+                      <div class="progress-bar bg-success" style="width: 70%">
+                        70%
+                      </div>
+                    </div>
+
+                    <p class="mb-1">Bootstrap</p>
+                    <div class="progress mb-3">
+                      <div class="progress-bar bg-success" style="width: 65%">
+                        65%
+                      </div>
+                    </div>
+
+                    <p class="mb-1">Photoshop</p>
+                    <div class="progress mb-3">
+                      <div class="progress-bar bg-success" style="width: 40%">
+                        40%
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- Setas -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#aboutCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#aboutCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Seguinte</span>
+            </button>
           </div>
         </div>
       </section>

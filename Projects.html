@@ -122,18 +122,25 @@
                   aria-expanded="false"
                   >Projects</a
                 >
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-end">
                   <li>
                     <a class="dropdown-item" href="MensagemDaEsperanca.html"
                       >Mensagem da Esperança</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#projects">Project 2</a>
+                    <a class="dropdown-item" href="NixOS.html"
+                      >Configuração do NixOS</a
+                    >
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item active" href="Projects.html" aria-current="page">See More...</a>
+                    <a
+                      class="dropdown-item active"
+                      href="Projects.html"
+                      aria-current="page"
+                      >See More...</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -170,8 +177,8 @@
                   <h5 class="card-title">Mensagem da Esperança</h5>
                   <p class="card-text">
                     A Mensagem da Esperança é uma app Android feita com React
-                    Native/Expo (gerada pela plataforma Emergent) para jovens
-                    de uma Assembleia Diocesana. Os jovens escrevem e partilham
+                    Native/Expo (gerada pela plataforma Emergent) para jovens de
+                    uma Assembleia Diocesana. Os jovens escrevem e partilham
                     mensagens de esperança, que só ficam visíveis depois de o
                     secretariado as aprovar numa área protegida por
                     palavra-passe, com filtro de palavras proibidas. Tem também
@@ -194,12 +201,21 @@
                   <img
                     src="images/proj2.jpg"
                     class="card-img-top"
-                    alt="Projeto 2"
+                    alt="Configuração do NixOS"
                   />
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Projeto 2</h5>
-                  <p class="card-text">Descrição curta do projeto.</p>
+                  <h5 class="card-title">Configuração do NixOS</h5>
+                  <p class="card-text">
+                    Sistema Linux configurado de forma reprodutível com NixOS e
+                    Flakes, em dual boot com Windows num portátil com gráfica
+                    Nvidia. Configuração modular (modules/), gerida com Home
+                    Manager, com dois ambientes de trabalho: KDE Plasma e
+                    Hyprland com Caelestia shell.
+                  </p>
+                  <a href="NixOS.html" class="btn btn-success stretched-link"
+                    >Ver projeto</a
+                  >
                 </div>
               </article>
             </div>
