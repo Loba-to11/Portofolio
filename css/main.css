@@ -45,13 +45,13 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
   z-index: 1;
 }
 
 .carousel-caption {
   z-index: 2;
-  bottom: 20%;;
+  bottom: 20%;
 }
 
 /* Só o título */
@@ -65,8 +65,14 @@ body {
 }
 
 @keyframes aparecer {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Escondido por defeito, incluindo durante a transição */
@@ -96,8 +102,13 @@ body {
 }
 
 @keyframes saltar {
-  0%, 100% { transform: translate(-50%, 0); }
-  50%      { transform: translate(-50%, 10px); }
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 10px);
+  }
 }
 
 .skill-icon {
@@ -129,7 +140,7 @@ body {
 .about {
   background-color: #e9ecef;
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
-  padding-top: 6rem !important;     /* espaço extra para o polígono não cortar o conteúdo */
+  padding-top: 6rem !important; /* espaço extra para o polígono não cortar o conteúdo */
   padding-bottom: 6rem !important;
 }
 
@@ -152,7 +163,9 @@ body {
 }
 
 .card-img-top {
-  transition: transform 0.5s, filter 0.5s;
+  transition:
+    transform 0.5s,
+    filter 0.5s;
 }
 
 /* Efeito: a imagem aumenta e escurece */
@@ -165,7 +178,7 @@ body {
 .img-wrap::after {
   content: "";
   position: absolute;
-  inset: 0;                         /* ocupa toda a imagem */
+  inset: 0; /* ocupa toda a imagem */
   background-color: rgba(42, 145, 52, 0.4);
   opacity: 0;
   transition: opacity 0.5s;
@@ -186,15 +199,15 @@ body {
 
 body {
   background-image: url("../images/imagem-fundo.png");
-  background-size: cover;          /* a imagem cobre o ecrã todo */
-  background-position: center;     /* centrada */
-  background-repeat: no-repeat;    /* não se repete em mosaico */
-  background-attachment: fixed;    /* fica parada enquanto fazes scroll */
+  background-size: cover; /* a imagem cobre o ecrã todo */
+  background-position: center; /* centrada */
+  background-repeat: no-repeat; /* não se repete em mosaico */
+  background-attachment: fixed; /* fica parada enquanto fazes scroll */
 }
 
 #skills,
 #projects {
-  color: #ffffff;   /* troca pela cor que quiseres */
+  color: #ffffff; /* troca pela cor que quiseres */
 }
 
 /* ===== Página Mensagem da Esperança ===== */
